@@ -1,0 +1,55 @@
+/* ==== List Page ==== */
+.list {
+    padding: 20px;
+}
+
+.list-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.list-table {
+    overflow-x: auto;
+}
+
+.list-table-format {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 3fr 3fr;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    border: 1px solid #cacaca;
+    font-size: 16px;
+}
+
+.list-table-format.title {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.list-table-format img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cursor {
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
+
+/* ==== Responsive List Page ==== */
+@media (max-width: 600px) {
+    .list-table-format {
+        grid-template-columns: 1fr 2fr 1fr;
+        font-size: 14px;
+    }
+
+    .list-table-format.title {
+        display: none;
+    }
+}

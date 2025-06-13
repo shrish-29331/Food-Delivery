@@ -1,0 +1,77 @@
+.order {
+    padding: 20px;
+}
+
+.order h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-item {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+    align-items: start;
+    gap: 30px;
+    border: 1px solid #e57373;
+    padding: 20px;
+    font-size: 14px;
+    color: #505050;
+    background-color: #fffaf8;
+    border-radius: 6px;
+}
+
+.order-item-food {
+    font-weight: 600;
+}
+
+.order-item-name {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.order-item-address {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.order-item-phone {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.order-item select {
+    background-color: #ffe8e4;
+    border: 1px solid tomato;
+    padding: 10px;
+    border-radius: 4px;
+    width: max(120px, 10vw);
+    font-size: 13px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* ==== Responsive Orders ==== */
+@media (max-width: 1000px) {
+    .order-item {
+        font-size: 12px;
+        grid-template-columns: 0.5fr 2fr 1fr;
+        padding: 15px 10px;
+    }
+
+    .order-item img {
+        width: 40px;
+    }
+
+    .order-item select {
+        padding: 6px;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,70 @@
+.merchant-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+.merchant-card {
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.merchant-card:hover {
+  transform: scale(1.02);
+}
+
+.merchant-card-left {
+  flex: 0 0 150px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.merchant-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.merchant-card-right {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.merchant-card-right h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.merchant-icons {
+  display: flex;
+  gap: 12px;
+  margin: 10px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.view-shop-btn {
+  width: fit-content;
+  padding: 8px 16px;
+  background-color: #f97316;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.view-shop-btn:hover {
+  background-color: #ea580c;
+}

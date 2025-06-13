@@ -1,0 +1,107 @@
+/* Merchant Shop Container */
+.merchant-shop {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.merchant-shop h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+/* Grid View for Food Items */
+.merchant-food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+  padding-bottom: 30px;
+}
+
+/* Food Item Card */
+.food-item {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.food-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Image Container */
+.food-item-img-container {
+  position: relative;
+}
+
+.food-item-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Add/Remove Buttons */
+.food-item-img-container .add,
+.food-item-counter {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: white;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.food-item-counter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 20px;
+  padding: 4px 8px;
+}
+
+/* Info Section */
+.food-item-info {
+  padding: 14px;
+}
+
+.food-item-name-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.food-item-name-rating p {
+  font-size: 1.1rem;
+}
+
+.food-item-desc {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.food-item-price {
+  font-weight: bold;
+  color: #f97316;
+  font-size: 1rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 600px) {
+  .merchant-food-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .food-item-image {
+    height: 140px;
+  }
+}

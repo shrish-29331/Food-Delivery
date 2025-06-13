@@ -1,0 +1,88 @@
+.add {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.add form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* ==== Image Upload Section ==== */
+.add-img-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.add-img-upload label {
+    font-weight: bold;
+}
+
+.add-img-upload img {
+    width: 180px;
+    height: 150px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px dashed #aaa;
+    border-radius: 6px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+/* ==== Product Input Fields ==== */
+.add-product-name,
+.add-product-description {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.add-product-name input,
+.add-product-description textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* ==== Category + Price ==== */
+.add-category-price {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.add-category-price select,
+.add-category-price input {
+    padding: 10px;
+    width: 120px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* ==== Submit Button ==== */
+.add-btn {
+    width: fit-content;
+    padding: 10px 35px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.add-btn:hover {
+    background-color: #333;
+}
