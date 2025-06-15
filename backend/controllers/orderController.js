@@ -6,7 +6,7 @@ import Stripe from "stripe";
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 // ✅ Place Order — With Stripe Session
 const placeOrder = async (req, res) => {
-  const frontend_url = "http://localhost:5174";
+  const frontend_url = "https://foogroo-delivery.vercel.app";
 
   try {
     const items = req.body.items;
