@@ -85,12 +85,17 @@ const getFoodByMerchants = async (req, res) => {
 // ✅ Get all food items with merchant name (for customers)
 const getAllFoodWithMerchant = async (req, res) => {
   try {
-    const foods = await foodModel.find().populate('adminId', 'name'); // populate merchant name
+    const foods = await foodModel.find().populate('adminId', 'name');
 
-    // Attach admin name manually for frontend
     const result = foods.map(food => ({
-      ...food._doc,
-      adminName: food.adminId.name || "Unknown Merchant"
+      _id: food._id,
+      name: food.name,
+      description: food.description,
+      price: food.price,
+      category: food.category,
+      image: food.image,
+      adminId: food.adminId?._id || null,
+      adminName: food.adminId?.name || "Unknown Merchant",
     }));
 
     res.status(200).json({ success: true, data: result });
@@ -99,6 +104,7 @@ const getAllFoodWithMerchant = async (req, res) => {
     res.status(500).json({ success: false, message: "Failed to fetch food list" });
   }
 };
+
 
 // ✅ Get food items for a specific merchant
 const getFoodByAdmin = async (req, res) => {
