@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 const MerchantList = ({ selectedCategory }) => {
   const [merchants, setMerchants] = useState([]);
-  const url = "http://localhost:4000";
+  const url = "https://food-delivery-xvni.onrender.com";
   const navigate = useNavigate();
 
   useEffect(() => {
