@@ -33,7 +33,7 @@ const AppContent = ({ url }) => {
   );
 };
 
-const App = ({ url = "http://localhost:4000" }) => {
+const App = ({ url = "https://food-delivery-xvni.onrender.com" }) => {
   return (
     <AdminContextProvider>
       <AppContent url={url} />
