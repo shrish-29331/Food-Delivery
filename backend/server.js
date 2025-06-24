@@ -16,8 +16,17 @@ const port=4000
 //middleware
 app.use(express.json())
 app.use(cors({
-  origin: "https://foogroo-delivery.vercel.app", // your Vercel frontend domain
+
+  origin: [
+
+    "https://foogroo-delivery.vercel.app",
+
+    "https://foogroo-admin.vercel.app"
+
+  ],
+
   credentials: true
+
 }));
 
 //db connection
